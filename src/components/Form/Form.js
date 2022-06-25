@@ -28,7 +28,6 @@ function Form(props) {
   const handleSubmit = e => {
     e.preventDefault();
     const newObj = { name: name, phone: phone };
-    console.log('current: ', name, phone);
     createContact(newObj);
     resetForm();
   };

@@ -15,8 +15,6 @@ export const App = () => {
     const handleFilter = e => {
       const { value } = e.target;
       setFilter(value);
-
-      console.log(e.target, 'filter:', filter);
     };
 
     const { visibleContacts, error } = useGetContactByNameQuery(undefined, {
@@ -27,8 +25,6 @@ export const App = () => {
         error: error,
       }),
     });
-
-    console.log('filter contacts: ', visibleContacts, error);
 
     return (
       <div>
